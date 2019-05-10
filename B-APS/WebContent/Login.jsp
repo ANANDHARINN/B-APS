@@ -7,7 +7,7 @@
 <title>Insert title here</title>
 <style>
 body {
-background-image: url("./img/im.jpg");
+background-image: url("./img/close.jpg");
 background-size:cover;
 font-family: Arial, Helvetica, sans-serif;}
 * {box-sizing: border-box}
@@ -85,7 +85,7 @@ button:hover {
 }
 .form {
   position: relative;
-  transform: translate(60%,30%);
+  transform: translate(90%,20%);
   z-index: 1;
   background: #FFFFFF;
   max-width: 360px;

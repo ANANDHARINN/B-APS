@@ -8,7 +8,7 @@
 </head>
 <style>
 body {
-background-image: url("./img/pen.jpg");
+background-image: url("./img/adult.jpg");
 background-size:cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -40,7 +40,7 @@ border-radius:20px;
 }
 
 hr {
-  border: 1px solid #f1f1f1;
+  border: 0px solid #f1f1f1;
   margin-bottom: 25px;
 }
 
@@ -121,8 +121,7 @@ filter: blur(8px);
 <form action="/action_page.php" style="border:1px solid #ccc">
   <div class="form">
  
-    <h1>Sign Up</h1>
-    <p>Please fill in this form to create an account.</p>
+    <center><h1>Sign Up</h1></center>
     <hr>
 	<label for="firstname"><b>First Name</b></label>
     <input type="text" placeholder="Enter your firstname" name="firstname" required>
@@ -132,7 +131,7 @@ filter: blur(8px);
     
      
 	<label for="dob"><b>Date of Birth</b></label>
-    <input type="date" name="dob" required>
+    <input type="date"  name="dob" required>
     
     
     <hr>
@@ -150,6 +149,8 @@ filter: blur(8px);
 
     <label for="psw"><b>Password</b></label>
     <input type="password" placeholder="Enter Password" name="psw" required>
+     <label for="bgp"><b>Blood Group</b></label>
+    <input type="text" placeholder="Enter Blood group" name="bgp" required>
 	<label for="Address"><b>Address</b></label>
 	
      <input type="address" placeholder="Enter Address" name="addr" required>
