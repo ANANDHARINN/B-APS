@@ -7,8 +7,11 @@
 <title>Insert title here</title>
 <style>
 body {
-background-image: url("./img/close.jpg");
+background-image: url("./img/Bgimage.png");
 background-size:cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
 font-family: Arial, Helvetica, sans-serif;}
 * {box-sizing: border-box}
 
@@ -26,7 +29,7 @@ input[type=text], input[type=password] {
 }
 
 input[type=text]:focus, input[type=password]:focus {
-  background-color: #ddd;
+  background-color: #F5A262;
   outline: none;
    border-radius:20px;
   border:none;
@@ -45,6 +48,8 @@ button {
   padding: 14px 20px;
   margin: 8px 0;
   border: none;
+    font-family:sans-serif;
+  
   cursor: pointer;
   width: 100%;
   opacity: 0.9;
@@ -64,9 +69,11 @@ button:hover {
 
 /* Float cancel and signup buttons and add an equal width */
 .cancelbtn, .signupbtn, .signinbtn {
-  float: left;
+	margin-left: 50px;
+	float: left;
   width: 50%;
   border-radius:20px;
+   font-family:sans-serif;
   border:none;
 }
 
@@ -85,16 +92,16 @@ button:hover {
 }
 .form {
   position: relative;
-  transform: translate(90%,20%);
+  transform: translate(70%,-15%);
   z-index: 1;
   background: #FFFFFF;
-  max-width: 360px;
+  max-width: 300px;
   margin: 0 auto 100px;
   padding: 45px;
   text-align: center;
   background-color:blue;
   background: rgba(0,0,0,0.4);
-  font-family:cursive;
+  font-family:sans-serif;
   color:white;
   border-radius:20px;
   border:none;
@@ -109,10 +116,19 @@ button:hover {
      padding:45px;
   }
 }
+.logo img
+{
+margin-top:-15px;
+	margin-left: 127px;
+	height: 138px;
+	transition: .5%;
+	
+}
 </style>
 </head>
 <body>
-
+<div class="logo">
+<img src="./img/logo2.png">
 <form action="/action_page.php">
 <div class="form">
   <div class="container">
@@ -124,11 +140,14 @@ button:hover {
     <input type="password" placeholder="Enter Password" name="psw" required>
      
     <div class="clearfix">
-      <button type="button" class="signinbtn"><font size="3" face="garamond">Sign In</font></button>
+      <button type="button" class="signinbtn"><font size="3" face="sans-serif">SignIn</font></button>
       
       </div>
      Not registered? <a href="Register.jsp"><font size="3" color="white" face="comic sans ms"> Sign Up!</font></a></p>
+      <a href="#dee"><font size="3" color="white" face="comic sans ms"> Forgot password?</font></a></p>
  </div>
+ </div>
+ 
 
   </div>
 </form>
