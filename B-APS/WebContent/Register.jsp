@@ -19,7 +19,7 @@ font-family: Arial, Helvetica, sans-serif;}
 /* Full-width input fields */
 input[type=text],input[type=address], input[type=password], input[type=number],input[type=date] {
   width: 100%;
-  padding: 10px;
+  padding: 5px;
   margin: 5px 0 22px 0;
   display: inline-block;
   border: none;
@@ -36,7 +36,7 @@ input[type=text]:focus, input[type=password]:focus,input[type=address]:focus,inp
 }
 
 text area{
-border-radius:20px;
+border-radius:10px;
   border:none;
 }
 
@@ -103,7 +103,7 @@ filter: blur(8px);
   background: #FFFFFF;
   max-width: 700px;
   margin: 0  300px;
-  padding: 45px;
+  padding: 30px;
   text-align: left;
   color:gray;
   border-radius:20px;
@@ -129,48 +129,38 @@ margin-top:-20px;
 </style>
 <body>
 
-<form action="/action_page.php" style="border:0px solid #ccc">
+<form action="Regvalida.jsp" onsubmit="return validate()" name="reg">
   <div class="form">
- <div class="logo">
-<img src="./img/logo2.png">
-    <center><h1>Sign Up</h1></center>
+     <center><h3>Sign Up</h3></center>
     
-	<label for="firstname"><b>First Name</b></label>
-    <input type="text" placeholder="Enter your firstname" name="firstname" required>
+	
+    <input type="text" placeholder="Enter your firstname" name="fname">
     </br>
-    <label for="lastname"><b>Last name</b></label>
-    <input type="text" placeholder="Enter your lastname" name="lastname" required>
+
+    <input type="text" placeholder="Enter your lastname" name="lname">
     </br>
      
-	<label for="dob"><b>Date of Birth</b></label>
-    <input type="date"  name="dob" placeholder="Select DOB" required>
-    
-    
+	
+    <input type="date"  name="dob" placeholder="Select DOB" >
+   
     </br>
-    <label for="gender"><b>Gender</b></label>
+    <input type="radio" value="male" >Male
+    <input type="radio" value="female">Female
+    <input type="radio" value="other" >Other
     </br>
-    </br>
-    <input type="radio" value="male" required>Male
-    <input type="radio" value="female" required>Female
-    <input type="radio" value="other" required>Other
-    </br>
-    </br>
-    <label for="phone"><b>Mobile</b></label>
-    <input type="number" placeholder="Enter your phone" name="lastname" required>
+   
+    <input type="number" placeholder="Enter your phone" name="phone" >
     </br>
           
-    <label for="email"><b>Email</b></label>
-    <input type="text" placeholder="Enter Email" name="email" required>
+
+    <input type="text" placeholder="Enter Email" name="email" >
 </br>
-    <label for="psw"><b>Password</b></label>
-    <input type="password" placeholder="Enter Password" name="psw" required>
-     </br>
-     <label for="bgp"><b>Blood Group</b></label>
-    <input type="text" placeholder="Enter Blood group" name="bgp" required>
+    
+   
+    <input type="text" placeholder="Enter Blood group" name="bgp" >
 	</br>
-	<label for="Address"><b>Address</b></label>
 	
-     <input type="address" placeholder="Enter Address" name="addr" required>
+     <input type="address" placeholder="Enter Address" name="addr" >
 	</br>
 	
 	 <label>
@@ -188,6 +178,45 @@ margin-top:-20px;
 </div>
   
 </form>
+<script>
+function validate()
+{
+	var fname = document.forms["reg"]["fname"];
+	var lname = document.forms["reg"]["lname"];
+	var dob = document.forms["reg"]["dob"];
+	var phone = document.forms["reg"]["phone"];
+	var email=document.forms["reg"]["email"];
+	if (fname.value == "") {
+		window.alert("Please enter your first name");
+		fname.focus();
+		return false;
+	}
+	if (lname.value == "") {
+		window.alert("Please enter your Last name");
+		lname.focus();
+		return false;
+	}
+	if (dob.value == "") {
+		window.alert("Please enter your Date of birth name");
+		dob.focus();
+		return false;
+	}
+	if ((phone.value == "")||((phone.value).length)<10) {
+		window.alert("Please enter the valid number");
+		phone.focus();
+		return false;
+	}
+	if (email.value == "") {
+		window.alert("Please enter valid Email");
+		email.focus();
+		return false;
+	}
+	
+	return true;
+	
+	
+}
+</script>
 
 </body>
 
